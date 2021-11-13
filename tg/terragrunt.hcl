@@ -3,9 +3,5 @@ locals {
 }
 
 inputs = merge(
-	local.secrets,
-	{
-		project = "teste"
-		env     = "hml"
-	}
+	local.secrets
 )
