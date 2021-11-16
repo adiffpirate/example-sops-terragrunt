@@ -1,4 +1,9 @@
-terraform {}
+terraform {
+  backend "kubernetes" {
+    secret_suffix    = "age-demo"
+    load_config_file = true
+  }
+}
 
 output "db_user" {
   value = var.db_user
