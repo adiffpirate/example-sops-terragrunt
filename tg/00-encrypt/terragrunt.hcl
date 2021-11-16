@@ -13,11 +13,11 @@ locals {
 }
 
 terraform {
-  after_hook "after_hook" {
-    commands     = ["apply"]
-    execute      = ["${find_in_parent_folders("scripts")}/get_keys.sh"]
-    run_on_error = true
-  }
+	after_hook "after_hook" {
+		commands     = ["apply"]
+		execute      = ["${find_in_parent_folders("scripts")}/get_keys.sh"]
+		run_on_error = true
+	}
 }
 
 inputs = {
