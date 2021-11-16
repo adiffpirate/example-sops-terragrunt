@@ -1,2 +1,0 @@
-project = "teste"
-env     = "hml"
