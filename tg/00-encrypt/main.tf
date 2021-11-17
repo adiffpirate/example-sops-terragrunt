@@ -15,44 +15,30 @@ resource "kubernetes_namespace" "encrypt" {
   }
 }
 
-resource "kubernetes_secret" "enc_keys" {
+resource "kubernetes_secret" "enc_key" {
   depends_on = [kubernetes_namespace.encrypt]
 
   # immutable = true
 
   metadata {
-    name      = "enc-keys"
+    name      = "enc-key"
     namespace = "encrypt"
   }
 
   data = {
-    public-key  = var.public_key
-    private-key = var.private_key
+    key = var.key
   }
 }
 
-# resource "local_file" "enc_keys" {
-#   sensitive_content = <<EOF
-# # public key: ${var.public_key}
-# ${var.private_key}
-# EOF
-#   filename = pathexpand("~/.config/sops/age/keys.txt")
-# }
-
-data "kubernetes_secret" "enc_keys" {
-  depends_on = [kubernetes_secret.enc_keys]
+data "kubernetes_secret" "enc_key" {
+  depends_on = [kubernetes_secret.enc_key]
   metadata {
-    name      = "enc-keys"
+    name      = "enc-key"
     namespace = "encrypt"
   }
 }
 
-output "public_key" {
-  value = data.kubernetes_secret.enc_keys.data.public-key
-  sensitive = true
-}
-
-output "private_key" {
-  value = data.kubernetes_secret.enc_keys.data.private-key
+output "key" {
+  value = data.kubernetes_secret.enc_keys.data.key
   sensitive = true
 }

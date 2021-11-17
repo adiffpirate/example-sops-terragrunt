@@ -1,6 +1,3 @@
-variable "public_key" {
-  sensitive = true
-}
-variable "private_key" {
+variable "key" {
   sensitive = true
 }
