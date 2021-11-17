@@ -39,6 +39,6 @@ data "kubernetes_secret" "enc_key" {
 }
 
 output "key" {
-  value = data.kubernetes_secret.enc_keys.data.key
+  value = data.kubernetes_secret.enc_key.data.key
   sensitive = true
 }
