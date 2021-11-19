@@ -1,0 +1,24 @@
+project: teste
+env: hml
+db_user: admin
+db_pass: ENC[AES256_GCM,data:JiRbZ/bevJ6rmStL2huEr7t6hh+MC5mrjDndFCl2bTp9i0n/y+9QQ6m0,iv:HISP2sIudxdTkbDP5OuByya322VBczg7FoZ+fQ1e+8M=,tag:rQm1v3PGUIjv6vnY0eC16Q==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1syfy5xm50t42t3q2j0qpdp37tjfty5z3w466f82rv7ylrtfhyy7sz803j4
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBCNlpxRWJhZnZhaFBoZkp4
+            dVhnOVUrWXpzZ2JpRFJCbkUxOGdmY0xzK2tBCkw2WjRUYVM2cWUyWDB0YVhxOEJ0
+            cCs5bW9iRTlmWE1JZXdpV0JBRmlQTXcKLS0tIFhUU1NZMmUrOXJCZmZZZnR0SnVL
+            bkhJSDR5aFJFcHAzVDlJWnNNd3lhcU0KjIbq82v2z4VLA1p2wRzqaaPLV99hf4jF
+            sQ5M5rRs456QG4cmSNfoFaDywDDVDX1CNNQ79DFnKe40GqthSQM8dw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2021-11-17T20:18:34Z"
+    mac: ENC[AES256_GCM,data:VnDI8aDNVrHHBVlTFiKfUDLZlFOXozrrz6/wWHEKBduA1dygNSM/P1s/xfpKi/uEYYqq5q1lgAsQ47u6k79QF1rfn20jgrRn0fJ8357qZH8zL5YXYJz6cLUWnIF/hpXlX7Br8HJwN4JD0pdiEitJdjMz4TBYe7pFyFhXterXgQY=,iv:0feH1G20fuE92CrwDkvEj2LoirQxsOiycdvLMES7FGc=,tag:YL9cJENhUJSVjBOlWb9o2w==,type:str]
+    pgp: []
+    encrypted_regex: pass
+    version: 3.7.1

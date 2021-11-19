@@ -1,2 +1,6 @@
 creation_rules:
+  - path_regex: \.yaml$
+    age: 'age1syfy5xm50t42t3q2j0qpdp37tjfty5z3w466f82rv7ylrtfhyy7sz803j4'
+    encrypted-regex: pass
+
   - age: 'age1syfy5xm50t42t3q2j0qpdp37tjfty5z3w466f82rv7ylrtfhyy7sz803j4'
